@@ -8,13 +8,13 @@
 
   $('form.php-email-form').submit(function(e) {
     e.preventDefault();
-    
+
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
     f.children('input').each(function() { // run all inputs
-     
+
       var i = $(this); // current input
       var rule = i.attr('data-rule');
 
@@ -60,7 +60,7 @@
             }
             break;
         }
-        i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+        i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'Completa todos los datos') : '')).show('blind');
       }
     });
     f.children('textarea').each(function() { // run all inputs
@@ -91,7 +91,7 @@
             }
             break;
         }
-        i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+        i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'Completa todos los datos') : '')).show('blind');
       }
     });
     if (ferror) return false;
@@ -104,7 +104,7 @@
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
       return false;
     }
-    
+
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
@@ -119,7 +119,7 @@
     } else {
       php_email_form_submit(this_form,action,this_form.serialize());
     }
-    
+
     return true;
   });
 
