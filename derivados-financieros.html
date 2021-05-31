@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        <title>Política de Privacidad - Fiorito - Factoring y Servicios Financieros</title>
+        <title>Derivados Financieros - Factoring y Servicios Financieros</title>
         <meta content="" name="description" />
         <meta content="" name="keywords" />
 
@@ -27,6 +27,222 @@
 
         <!-- Template Main CSS File -->
         <link href="assets/css/style.css" rel="stylesheet" />
+
+        <style>
+            .category {
+                text-transform: capitalize;
+                font-weight: 700;
+                color: #9a9a9a;
+            }
+
+            .nav-item .nav-link,
+            .nav-tabs .nav-link {
+                -webkit-transition: all 300ms ease 0s;
+                -moz-transition: all 300ms ease 0s;
+                -o-transition: all 300ms ease 0s;
+                -ms-transition: all 300ms ease 0s;
+                transition: all 300ms ease 0s;
+            }
+
+            .card a {
+                -webkit-transition: all 150ms ease 0s;
+                -moz-transition: all 150ms ease 0s;
+                -o-transition: all 150ms ease 0s;
+                -ms-transition: all 150ms ease 0s;
+                transition: all 150ms ease 0s;
+            }
+
+            [data-toggle="collapse"][data-parent="#accordion"] i {
+                -webkit-transition: transform 150ms ease 0s;
+                -moz-transition: transform 150ms ease 0s;
+                -o-transition: transform 150ms ease 0s;
+                -ms-transition: all 150ms ease 0s;
+                transition: transform 150ms ease 0s;
+            }
+
+            [data-toggle="collapse"][data-parent="#accordion"][aria-expanded="true"] i {
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            .now-ui-icons {
+                display: inline-block;
+                font: normal normal normal 14px/1 "Nucleo Outline";
+                font-size: inherit;
+                speak: none;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            @-webkit-keyframes nc-icon-spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @-moz-keyframes nc-icon-spin {
+                0% {
+                    -moz-transform: rotate(0deg);
+                }
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes nc-icon-spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            .now-ui-icons.objects_umbrella-13:before {
+                content: "\ea5f";
+            }
+
+            .now-ui-icons.shopping_cart-simple:before {
+                content: "\ea1d";
+            }
+
+            .now-ui-icons.shopping_shop:before {
+                content: "\ea50";
+            }
+
+            .now-ui-icons.ui-2_settings-90:before {
+                content: "\ea4b";
+            }
+
+            .nav-tabs {
+                border: 0;
+                padding: 15px 0.7rem;
+            }
+
+            .card .nav-tabs {
+                border-top-right-radius: 0.1875rem;
+                border-top-left-radius: 0.1875rem;
+            }
+
+            .nav-tabs > .nav-item > .nav-link {
+                color: #888888;
+                margin: 0 15px;
+                margin-right: 5px;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: 30px;
+                font-size: 14px;
+                padding: 11px 23px;
+                line-height: 1.5;
+                border: 1px solid #6b0c27;
+            }
+
+            .nav-tabs > .nav-item > .nav-link:hover {
+                background-color: transparent;
+            }
+
+            .nav-tabs > .nav-item > .nav-link.active {
+                background-color: #6b0c27;
+                border-radius: 30px;
+                color: #ffffff;
+            }
+
+            .nav-tabs > .nav-item > .nav-link i.now-ui-icons {
+                font-size: 14px;
+                position: relative;
+                top: 1px;
+                margin-right: 3px;
+            }
+
+            .nav-tabs.nav-tabs-neutral > .nav-item > .nav-link {
+                color: #ffffff;
+            }
+
+            .nav-tabs.nav-tabs-neutral > .nav-item > .nav-link.active {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: #ffffff;
+            }
+
+            .card {
+                border: 0;
+                border-radius: 0.1875rem;
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                margin-bottom: 30px;
+                margin-top: 60px;
+            }
+
+            .card .card-header {
+                background-color: transparent;
+                border-bottom: 0;
+                background-color: transparent;
+                border-radius: 0;
+                padding: 0;
+                margin-bottom: 15px;
+            }
+
+            .card[data-background-color="orange"] {
+                background-color: #f96332;
+            }
+
+            .card[data-background-color="red"] {
+                background-color: #ff3636;
+            }
+
+            .card[data-background-color="yellow"] {
+                background-color: #ffb236;
+            }
+
+            .card[data-background-color="blue"] {
+                background-color: #2ca8ff;
+            }
+
+            .card[data-background-color="green"] {
+                background-color: #15b60d;
+            }
+
+            [data-background-color="orange"] {
+                background-color: #e95e38;
+            }
+
+            [data-background-color="black"] {
+                background-color: #2c2c2c;
+            }
+
+            [data-background-color]:not([data-background-color="gray"]) {
+                color: #ffffff;
+            }
+
+            [data-background-color]:not([data-background-color="gray"]) p {
+                color: #ffffff;
+            }
+
+            [data-background-color]:not([data-background-color="gray"]) a:not(.btn):not(.dropdown-item) {
+                color: #ffffff;
+            }
+
+            [data-background-color]:not([data-background-color="gray"]) .nav-tabs > .nav-item > .nav-link i.now-ui-icons {
+                color: #ffffff;
+            }
+        </style>
     </head>
 
     <body id="quienesSomos">
@@ -109,34 +325,40 @@
             <section class="features">
                 <div class="container">
                     <div class="section-title">
-                        <h2>Política de Privacidad</h2>
+                        <h2>Derivados Financieros</h2>
                     </div>
 
                     <div class="row" data-aos="fade-up">
                         <div class="col-xs-12 pt-4 pt-lg-0" id="codigoFormat">
-                            <p class="noMargin">
-                                FIORITO FACTORING S.A. (FFyNF) se compromete a respetar la privacidad de los usuarios. A continuación, se enuncia como manejamos los datos recabados en nuestro sitio web.<br />
-                                <br />
-                            </p>
-                            <h6>- Uso de la Información.</h6>
-                            <p>
-                                En el formulario de Contáctenos solicitamos los siguientes datos personales: nombre completo, dirección de correo electrónico y número de teléfono. FFyNF únicamente utilizará tal información para contactarse
-                                con el usuario a fin de responder su inquietud.<br />
-                                FFyNF no utiliza cookies ni ningún otro método para identificar a los usuarios de su sitio web. FFyNF puede registrar la dirección IP de los usuarios con fines estadísticos.
-                            </p>
-
-                            <h6>- Manejo de la Información.</h6>
-                            <p>
-                                &bull; FFyNF no compartirá ni venderá la información personal suministrada por los usuarios con otras empresas, a menos que el usuario lo autorice explícitamente.<br />
-                                &bull; FFyNF dará a conocer la información brindada por los usuarios en el caso de deber responder a citaciones jurídicas y/o a procesos legales.<br />
-                                &bull; FFyNF no mantiene online la información de los usuarios.
-                            </p>
-
-                            <h6>- Modificaciones a la Política de Privacidad.</h6>
-                            <p>&bull; FFyNF puede realizar cambios a la Política de Privacidad cuando así lo desee. En este caso, lo hará saber a los usuarios en su sitio, de manera destacada.</p>
-
-                            <h6>- Dudas o Sugerencias.</h6>
-                            <p>&bull; Si posee alguna duda o sugerencia sobre nuestra Política de Privacidad, por favor envíenos un e-mail a privacidad@fioritofactoring.com.ar que con gusto se la responderemos.</p>
+                            <!-- Nav tabs -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#titulos" role="tab"> Opciones </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#obligaciones" role="tab"> Futuros </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Tab panes -->
+                                    <div class="tab-content text-center">
+                                        <div class="tab-pane active" id="titulos" role="tabpanel">
+                                            <p>
+                                                Representan el derecho, pero no la obligación, de comprar o vender el activo subyacente antes de una fecha establecida y a un precio establecido.
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane" id="obligaciones" role="tabpanel">
+                                            <p>
+                                                Un futuro es un contrato mediante el cual se adquiere el compromiso de entregar o recibir un activo para un plazo y precio determinado. El mercado de futuros te ofrece la posibilidad de tener
+                                                cobertura ante futuras variaciones en los precios de los activos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
