@@ -2995,3 +2995,11 @@ th, td {
     left: -265px!important;
     min-width: 270px!important;
 }
+
+.titulosPublicos, .acciones, .obligaciones, .cedears, .cheques, .opciones, .futuros, .cauciones{
+    color: #444;
+}
+
+.titulosPublicos:hover, .acciones:hover, .obligaciones:hover, .cedears:hover, .cheques:hover, .opciones:hover, .futuros:hover, .cauciones:hover{
+    color: #6b0c27;
+}

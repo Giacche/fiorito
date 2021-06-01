@@ -295,29 +295,9 @@
                         <li class="drop-down">
                             <a style="color: white;">Inversiones</a>
                             <ul class="withMarginTop">
-                                <li class="drop-down">
-                                    <a href="renta-fija.html">Renta Fija</a>
-                                    <ul class="withMarginTop specialDropdown">
-                                        <li><a>Títulos Públicos</a></li>
-                                        <li><a>Obligaciones Negociables</a></li>
-                                        <li><a>Cheque de Pago diferido y Pagares</a></li>
-                                        <li><a>Cauciones Bursátiles</a></li>
-                                    </ul>
-                                </li>
-                                <li class="drop-down">
-                                    <a href="renta-variable.html">Renta Variables</a>
-                                    <ul class="withMarginTop specialDropdown">
-                                        <li><a>Acciones</a></li>
-                                        <li><a>CEDEAR´s</a></li>
-                                    </ul>
-                                </li>
-                                <li class="drop-down">
-                                    <a href="derivados-financieros.html">Derivados Financieros</a>
-                                    <ul class="withMarginTop specialDropdown">
-                                        <li><a>Opciones</a></li>
-                                        <li><a>Futuros</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="renta-fija.html">Renta Fija</a></li>
+                                <li><a href="renta-variable.html">Renta Variable</a></li>
+                                <li><a href="derivados-financieros.html">Derivados Financieros</a></li>
                             </ul>
                         </li>
                         <li><a href="#contact">Contáctenos</a></li>
@@ -333,25 +313,27 @@
                 <div class="container">
                     <div class="section-title">
                         <h2>Renta Fija</h2>
+
                     </div>
 
                     <div class="row" data-aos="fade-up">
                         <div class="col-xs-12 pt-4 pt-lg-0" id="codigoFormat">
+                            <p class="text-center"><b>Dentro del segmento de Renta Fija se negocian los siguientes instrumentos:</b></p>
                             <!-- Nav tabs -->
                             <div class="card">
                                 <div class="card-header">
                                     <ul class="nav nav-tabs justify-content-center" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#titulos" role="tab"> Títulos Públicos </a>
+                                            <a class="nav-link active" id="titulosPubs" data-toggle="tab" href="#titulos" role="tab"> Títulos Públicos </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#obligaciones" role="tab"> Obligaciones Negociables </a>
+                                            <a class="nav-link" id="obliNegociables" data-toggle="tab" href="#obligaciones" role="tab"> Obligaciones Negociables </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#cheques" role="tab"> Cheque de pago Diferido y Pagares </a>
+                                            <a class="nav-link" id="chequesDif" data-toggle="tab" href="#cheques" role="tab"> Cheque de pago Diferido y Pagares </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#cauciones" role="tab"> Cauciones Bursátiles </a>
+                                            <a class="nav-link" id="causionesBur" data-toggle="tab" href="#cauciones" role="tab"> Cauciones Bursátiles </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -391,7 +373,7 @@
             <!-- End Features Section -->
 
             <!-- ======= Contact Section ======= -->
-            <section class="contact" id="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <section class="contact" id="contact"  data-aos-easing="ease-in-out" data-aos-duration="500">
                 <div class="container">
                     <div class="section-title">
                         <h2>Contacto</h2>
@@ -484,7 +466,7 @@
         <!-- End #main -->
 
         <!-- ======= Footer ======= -->
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <footer id="footer"  data-aos-easing="ease-in-out" data-aos-duration="500">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
@@ -570,5 +552,37 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                if(window.location.href.indexOf("titulos-publicos") > -1){
+
+                }else{
+                    if(window.location.href.indexOf("obligaciones-negociables") > -1){
+                        $("#titulosPubs").removeClass("active");
+                        $("#titulos").removeClass("active");
+
+                        $("#obliNegociables").addClass("active");
+                        $("#obligaciones").addClass("active");
+                    }else{
+                        if(window.location.href.indexOf("cheques") > -1){
+                            $("#titulosPubs").removeClass("active");
+                            $("#titulos").removeClass("active");
+
+                            $("#chequesDif").addClass("active");
+                            $("#cheques").addClass("active");
+                        }else{
+                            if(window.location.href.indexOf("cauciones-bursatiles") > -1){
+                                $("#titulosPubs").removeClass("active");
+                                $("#titulos").removeClass("active");
+
+                                $("#causionesBur").addClass("active");
+                                $("#cauciones").addClass("active");
+                            }
+                        }
+                    }
+                }
+            })
+        </script>
     </body>
 </html>

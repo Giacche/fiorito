@@ -288,29 +288,9 @@
                         <li class="drop-down">
                             <a style="color: white;">Inversiones</a>
                             <ul class="withMarginTop">
-                                <li class="drop-down">
-                                    <a href="renta-fija.html">Renta Fija</a>
-                                    <ul class="withMarginTop specialDropdown">
-                                        <li><a>Títulos Públicos</a></li>
-                                        <li><a>Obligaciones Negociables</a></li>
-                                        <li><a>Cheque de Pago diferido y Pagares</a></li>
-                                        <li><a>Cauciones Bursátiles</a></li>
-                                    </ul>
-                                </li>
-                                <li class="drop-down">
-                                    <a href="renta-variable.html">Renta Variables</a>
-                                    <ul class="withMarginTop specialDropdown">
-                                        <li><a>Acciones</a></li>
-                                        <li><a>CEDEAR´s</a></li>
-                                    </ul>
-                                </li>
-                                <li class="drop-down">
-                                    <a href="derivados-financieros.html">Derivados Financieros</a>
-                                    <ul class="withMarginTop specialDropdown">
-                                        <li><a>Opciones</a></li>
-                                        <li><a>Futuros</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="renta-fija.html">Renta Fija</a></li>
+                                <li><a href="renta-variable.html">Renta Variable</a></li>
+                                <li><a href="derivados-financieros.html">Derivados Financieros</a></li>
                             </ul>
                         </li>
                         <li><a href="#contact">Contáctenos</a></li>
@@ -330,27 +310,28 @@
 
                     <div class="row" data-aos="fade-up">
                         <div class="col-xs-12 pt-4 pt-lg-0" id="codigoFormat">
+                            <p class="text-center"><b>Dentro del segmento de Renta Variable se negocian los siguientes instrumentos:</b></p>
                             <!-- Nav tabs -->
                             <div class="card">
                                 <div class="card-header">
                                     <ul class="nav nav-tabs justify-content-center" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#titulos" role="tab"> Acciones </a>
+                                            <a class="nav-link active" id="accionesTab" data-toggle="tab" href="#acciones" role="tab"> Acciones </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#obligaciones" role="tab"> CEDEAR´s </a>
+                                            <a class="nav-link" id="cedearsTab" data-toggle="tab" href="#cedears" role="tab"> CEDEAR´s </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="card-body">
                                     <!-- Tab panes -->
                                     <div class="tab-content text-center">
-                                        <div class="tab-pane active" id="titulos" role="tabpanel">
+                                        <div class="tab-pane active" id="acciones" role="tabpanel">
                                             <p>
                                                 Las acciones son las partes iguales en las que se divide el capital de una empresa emisora. Al adquirir este tipo de instrumento te estas asociando con la empresa.
                                             </p>
                                         </div>
-                                        <div class="tab-pane" id="obligaciones" role="tabpanel">
+                                        <div class="tab-pane" id="cedears" role="tabpanel">
                                             <p>
                                                 Certificados de depósitos Argentinos; los CEDEAR’s son certificados de acciones de empresas que cotizan en el exterior. Este instrumento te permite operar localmente acciones de empresas
                                                 extranjeras.
@@ -545,5 +526,21 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                if(window.location.href.indexOf("acciones") > -1){
+
+                }else{
+                    if(window.location.href.indexOf("cedears") > -1){
+                        $("#accionesTab").removeClass("active");
+                        $("#acciones").removeClass("active");
+
+                        $("#cedearsTab").addClass("active");
+                        $("#cedears").addClass("active");
+                    }
+                }
+            })
+        </script>
     </body>
 </html>
