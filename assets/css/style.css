@@ -99,6 +99,8 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
 #header .logo img {
   padding: 0;
   margin: 0;
+    width: 238px;
+    height: 80px;
 }
 
 #headerTwo{
@@ -112,7 +114,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
     -moz-box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
     box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
     margin-top: 95px;
-    height: 50px;
+    height: 65px;
 }
 
 #headerTwo .nav-menu, #headerTwo .nav-menu > ul > li, #headerTwo .nav-menu > ul > li a, #headerTwo ul{
@@ -120,7 +122,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
 }
 
 #headerTwo .nav-menu{
-    margin-top: -5px;
+    margin-top: 1px;
 }
 
 
@@ -147,7 +149,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
   color: white;
   padding: 10px 15px;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -521,7 +523,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
 --------------------------------------------------------------*/
 #hero-no-slider {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 0px);
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -535,6 +537,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
   right: 0;
   bottom: 0;
   background: linear-gradient(to right, rgba(103, 23, 36, 0.3), rgba(103, 23, 36, 0.4)), url("../img/hero-bg.jpg") center top no-repeat;
+    background-size: cover;
 }
 
 #hero-no-slider h2 {
@@ -542,6 +545,8 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
   margin-bottom: 15px;
   font-size: 48px;
   font-weight: 700;
+    text-transform: uppercase;
+        margin-top: 100px;
 }
 
 #hero-no-slider p {
@@ -551,7 +556,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
 #hero-no-slider .btn-get-started {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 32px;
@@ -562,7 +567,7 @@ box-shadow: 0px 6px 15px 0px rgba(194,194,194,0.2);
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #6b0c27;
+  border: 2px solid white;
     background: #6b0c27;
 }
 
@@ -596,11 +601,12 @@ section {
 }
 
 .section-title h2 {
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .section-title h2::before {
@@ -680,11 +686,11 @@ section {
 --------------------------------------------------------------*/
 
 .services .icon-box {
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
   position: relative;
   overflow: hidden;
   margin: 0  0 40px 0;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 5px 26px 0 rgba(68, 88, 144, 0.14);
   transition: all 0.3s ease-in-out;
   text-align: center;
@@ -721,10 +727,12 @@ section {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
+    text-align: justify;
 }
 
 .services .icon-box-pink{
-    padding-top: 75px;
+    padding-top: 30px;
+    border-color: #6b0c27;
 }
 
 .services .icon-box-pink .icon {
@@ -747,7 +755,7 @@ section {
   color: #6b0c27;
 }
 
-.services .icon-box-cyan:hover {
+.services .icon-box-cyan {
   border-color: #6b0c27;
 }
 
@@ -1609,56 +1617,6 @@ section {
     padding: 44px 30px;
     /* margin-bottom: 30px; */
     background-color: white;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
 }
 
 .contact .php-email-form input, .contact .php-email-form textarea {
@@ -2943,7 +2901,7 @@ th, td {
 }
 
 .withMarginTop{
-    margin-top: 3px!important;
+    margin-top: 9px!important;
 }
 
 .history{
@@ -3002,4 +2960,14 @@ th, td {
 
 .titulosPublicos:hover, .acciones:hover, .obligaciones:hover, .cedears:hover, .cheques:hover, .opciones:hover, .futuros:hover, .cauciones:hover{
     color: #6b0c27;
+}
+
+#openAccountModal .modal-header, #openAccountModal .modal-footer{
+    border: 0!important;
+}
+
+#openAccountModal .modal-body p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
 }

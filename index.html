@@ -35,12 +35,12 @@
                 <div class="logo float-left">
                     <!--h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1-->
                     <!-- Uncomment below if you prefer to use an image logo -->
-                    <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
+                    <a href="index.html"><img src="assets/img/logo.svg" alt="" class="img-fluid" /></a>
                 </div>
 
                 <nav class="nav-menu float-right d-none d-lg-block">
                     <ul>
-                        <!--li><a href="https://gallo.fioritofactoring.com.ar/Login/NewUser" class="differentBtn first">Abrir cuenta</a></li-->
+                        <li><a style="cursor: pointer;" data-toggle="modal" data-target="#openAccountModal" class="differentBtn first">Abrir cuenta</a></li>
                         <li><a href="https://gallo.fioritofactoring.com.ar/" class="differentBtn">Ingresar</a></li>
                     </ul>
                 </nav>
@@ -49,7 +49,7 @@
         </header>
         <header id="headerTwo" class="fixed-top">
             <div class="container container-header">
-                <nav class="nav-menu float-right d-none d-lg-block">
+                <nav class="nav-menu float-left d-none d-lg-block">
                     <ul>
                         <li class="drop-down">
                             <a href="empresa.html">Nosotros</a>
@@ -90,7 +90,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-10">
                         <h2>El socio estratégico que buscabas</h2>
-                        <a href="#servicios" class="btn-get-started">Servicios <i class="fas fa-chevron-down"></i></a>
+                        <a href="#servicios" class="btn-get-started">SERVICIOS <i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
             </div>
@@ -160,7 +160,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="emailto:info@fioritofactoring.com.ar">
+                                    <a href="mailto:info@fioritofactoring.com.ar">
                                         <div class="info-box">
                                             <i class="far fa-envelope"></i>
                                             <h3>Email</h3>
@@ -181,44 +181,33 @@
                         </div>
 
                         <div class="col-lg-6">
-                            <form action="#" method="post" role="form" class="php-email-form">
+                            <form method="POST" action="sendmail.php" role="form" class="php-email-form">
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" placeholder="Nombre y apellido*" data-msg="Campo incompleto" />
-                                        <div class="validate"></div>
+                                        <input type="text" name="nombre" class="form-control" placeholder="Nombre y apellido*" />
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" placeholder="Empresa" data-msg="Campo incompleto" />
-                                        <div class="validate"></div>
+                                        <input type="text" name="empresa" class="form-control" placeholder="Empresa"  />
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
-                                        <input type="number" class="form-control" placeholder="DNI*" data-msg="Campo incompleto" />
-                                        <div class="validate"></div>
+                                        <input type="number" name="dni" class="form-control" placeholder="DNI*"  />
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" placeholder="Provincia*" data-msg="Campo incompleto" />
-                                        <div class="validate"></div>
+                                        <input type="text" name="provincia" class="form-control" placeholder="Provincia*"  />
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 form-group">
-                                        <input type="email" class="form-control" placeholder="Email*" data-msg="Campo incompleto" />
-                                        <div class="validate"></div>
+                                        <input type="email" name="email" class="form-control" placeholder="Email*"  />
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input type="tel" class="form-control" placeholder="Teléfono*" data-msg="Campo incompleto" />
-                                        <div class="validate"></div>
+                                        <input type="tel" name="telefono" class="form-control" placeholder="Teléfono*"  />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="2" data-rule="required" placeholder="Mensaje*"></textarea>
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="loading">Cargando</div>
-                                    <div class="error-message"></div>
+                                    <textarea class="form-control" rows="2" name="mensaje" placeholder="Mensaje*"></textarea>
                                 </div>
                                 <div class="text-center"><button type="submit">Enviar</button></div>
                             </form>
@@ -302,6 +291,28 @@
         <!-- End Footer -->
 
         <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="openAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Qué tipo de cuenta querés abrir?</p>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <a href="https://gallo.fioritofactoring.com.ar/ObFisicas" class="differentBtn">Persona Física</a>
+                        <a href="https://gallo.fioritofactoring.com.ar/ObJuridicas" class="differentBtn">Persona Jurídica</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Vendor JS Files -->
         <script src="assets/vendor/jquery/jquery.min.js"></script>
